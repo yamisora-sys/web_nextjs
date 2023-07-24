@@ -2,20 +2,27 @@
   "name": "webtruyen",
   "version": "0.1.0",
   "private": true,
+  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "new-migration": "node cmd/migrations.cjs --create",
+    "migration": "node cmd/migrations.cjs up",
+    "migration-rollback": "node cmd/migrations.cjs down"
   },
   "dependencies": {
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "dotenv": "^16.3.1",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
+    "migrations": "^1.3.0",
     "next": "13.4.10",
+    "orm": "^8.0.0",
     "postcss": "8.4.26",
     "react": "18.2.0",
     "react-dom": "18.2.0",
